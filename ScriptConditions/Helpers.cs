@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Linq;
 using System.Security.AccessControl;
 using System.Threading.Tasks;
@@ -143,6 +143,11 @@ namespace LlamaLibrary.ScriptConditions
             }
 
             return false;
+        }
+
+        public static bool IsDutyAvailable(int duty)
+        {
+            return DutyManager.AvailableContent.Keys.Contains((uint)duty);
         }
 
         /*public static int GetLeveTodoArgsItem1(int index)
